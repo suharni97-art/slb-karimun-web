@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: suharni97-art/slb-karimun-web
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "berita"
+    label: "Berita Sekolah"
+    folder: "berita"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Judul Berita", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Foto Utama", name: "image", widget: "image" }
+      - { label: "Isi Berita", name: "body", widget: "markdown" }
